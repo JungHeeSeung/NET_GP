@@ -5,6 +5,7 @@
 #include <iostream>
 
 
+
 #define SERVERIP "127.0.0.1"
 #define SERVERPORT 9000
 #define BUFSIZE 4096
@@ -22,7 +23,7 @@ int main(int argc, char * argv[]) {
 	SOCKET sock = socket(AF_INET, SOCK_STREAM, 0);
 	if (sock == INVALID_SOCKET) { err_quit("socket()"); }
 
-
+	
 	// connect()
 	SOCKADDR_IN serverAddr;
 	ZeroMemory(&serverAddr, sizeof(serverAddr));
@@ -51,7 +52,7 @@ int main(int argc, char * argv[]) {
 		err_quit("send()");
 	}
 
-	// 파일 이름 전송하기
+	// 파일 이름 
 	int fileNameLen = strlen(fileName);
 
 	// 데이터 보내기 (고정 길이)
@@ -68,7 +69,7 @@ int main(int argc, char * argv[]) {
 		err_display("send()");
 	}
 
-	std::cout << "[TCP 클라이언트] " << sizeof(int) << " + " << retVal << "(파일 이름의 크기)" << "바이트를 보냈습니다. \n";
+	//std::cout << "[TCP 클라이언트] " << sizeof(int) << " + " << retVal << "(파일 이름의 크기)" << "바이트를 보냈습니다. \n";
 
 
 	// 파일 크기얻기
@@ -87,7 +88,7 @@ int main(int argc, char * argv[]) {
 		err_display("send()");
 	}
 
-	std::cout << "[TCP 클라이언트] " << "파일 크기 " << fileSize << "(바이트)를 담은 " << sizeof(int) << "바이트를 보냈습니다. \n";
+	//std::cout << "[TCP 클라이언트] " << "파일 크기 " << fileSize << "(바이트)를 담은 " << sizeof(int) << "바이트를 보냈습니다. \n";
 
 	// 데이터 보내기 (가변 길이)
 	// 파일의 크기 < BUFSIZE -> 바로 전송
@@ -99,7 +100,6 @@ int main(int argc, char * argv[]) {
 	unsigned int leftFileSize = 0;
 	leftFileSize = fileSize;
 
-	
 
 	int total_len = 20;	// 진행바 길이
 	int cur_len;	// 진행바 현재 길이

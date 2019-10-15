@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TCP_Client", "TCP_Client.vcxproj", "{2A66E1CA-C033-49DF-AE90-04EF91D7F27D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TCP_MulitClient", "..\TCP_MulitClient\TCP_MulitClient.vcxproj", "{06D9010A-CBFA-436B-877B-FFEE19CB2E48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{2A66E1CA-C033-49DF-AE90-04EF91D7F27D}.Release|x64.Build.0 = Release|x64
 		{2A66E1CA-C033-49DF-AE90-04EF91D7F27D}.Release|x86.ActiveCfg = Release|Win32
 		{2A66E1CA-C033-49DF-AE90-04EF91D7F27D}.Release|x86.Build.0 = Release|Win32
+		{06D9010A-CBFA-436B-877B-FFEE19CB2E48}.Debug|x64.ActiveCfg = Debug|x64
+		{06D9010A-CBFA-436B-877B-FFEE19CB2E48}.Debug|x64.Build.0 = Debug|x64
+		{06D9010A-CBFA-436B-877B-FFEE19CB2E48}.Debug|x86.ActiveCfg = Debug|Win32
+		{06D9010A-CBFA-436B-877B-FFEE19CB2E48}.Debug|x86.Build.0 = Debug|Win32
+		{06D9010A-CBFA-436B-877B-FFEE19CB2E48}.Release|x64.ActiveCfg = Release|x64
+		{06D9010A-CBFA-436B-877B-FFEE19CB2E48}.Release|x64.Build.0 = Release|x64
+		{06D9010A-CBFA-436B-877B-FFEE19CB2E48}.Release|x86.ActiveCfg = Release|Win32
+		{06D9010A-CBFA-436B-877B-FFEE19CB2E48}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

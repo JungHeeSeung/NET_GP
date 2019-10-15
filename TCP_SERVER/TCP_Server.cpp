@@ -47,9 +47,11 @@ int main(int argc, char * argv[]) {
 	unsigned int fileNameLen = 0;
 	unsigned int downloadSize = 0;
 
+
 	int total_len = 20;	// 진행바 길이
 	int cur_len;	// 진행바 현재 길이
 	float per;		// 현재 작업 진행상황
+
 
 	while (1) {
 		// accept()
@@ -164,6 +166,8 @@ int main(int argc, char * argv[]) {
 			<< "파일 다운로드 완료! 받은 파일 크기 : " << ftell(fp) - 4 << std::endl;
 		fclose(fp);
 
+		downloadSize = 0;
+
 		// closesocket()
 		closesocket(client_sock);
 		std::cout << "[TCP 서버] 클라이언트 종료 : IP 주소 = " << inet_ntoa(clientAddr.sin_addr)
@@ -173,6 +177,7 @@ int main(int argc, char * argv[]) {
 	// closesocket()
 	closesocket(listen_sock);
 
+	
 	WSACleanup();
 	return 0;
 }
